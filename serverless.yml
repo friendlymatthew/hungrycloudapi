@@ -1,0 +1,76 @@
+service: hungry-cloud-api
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  environment:
+    DYNAMODB_TABLE_NAME: ${self:custom.grainsTableName}
+
+custom:
+  grainsTableName: grains-table-${self:provider.stage}
+
+plugins:
+  - serverless-iam-roles-per-function
+
+functions:
+  getGrain:
+    handler: api.getGrain
+    name: get-grain
+    memorySize: 128 # mb
+    timeout: 5 # seconds
+    events:
+      - http:
+          path: grains/{grainId}
+          method: GET
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:GetItem"
+        Resource: !GetAtt GrainsTable.Arn
+  createGrain:
+    handler: api.createGrain
+    name: create-grain
+    memorySize: 128 # mb
+    timeout: 5 # seconds
+    events:
+      - http:
+          path: grain
+          method: POST
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:PutItem"
+        Resource: !GetAtt GrainsTable.Arn
+  deleteGrain:
+    handler: api.deleteGrain
+    name: delete-grain
+    memorySize: 128 # mb
+    timeout: 5 # seconds
+    events:
+      - http:
+          path: grain/{grainId}
+          method: DELETE
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action:
+          - "dynamodb:DeleteItem"
+        Resource: !GetAtt GrainsTable.Arn
+  
+
+resources:
+  Resources:
+    GrainsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.grainsTableName}
+        AttributeDefinitions:
+          - AttributeName: grainId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: grainId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 100
+          WriteCapacityUnits: 100

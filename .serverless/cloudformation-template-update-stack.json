@@ -114,7 +114,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "hungry-cloud-api",
+                  "hungrycloudapi",
                   "dev",
                   "lambda"
                 ]
@@ -167,7 +167,7 @@
           "Fn::Join": [
             "-",
             [
-              "hungry-cloud-api",
+              "hungrycloudapi",
               "dev",
               {
                 "Ref": "AWS::Region"
@@ -185,7 +185,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hungry-cloud-api/dev/1646942477805-2022-03-10T20:01:17.805Z/hungry-cloud-api.zip"
+          "S3Key": "serverless/hungrycloudapi/dev/1646943901170-2022-03-10T20:25:01.170Z/hungrycloudapi.zip"
         },
         "Handler": "api.getGrain",
         "Runtime": "nodejs14.x",
@@ -216,7 +216,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hungry-cloud-api/dev/1646942477805-2022-03-10T20:01:17.805Z/hungry-cloud-api.zip"
+          "S3Key": "serverless/hungrycloudapi/dev/1646943901170-2022-03-10T20:25:01.170Z/hungrycloudapi.zip"
         },
         "Handler": "api.createGrain",
         "Runtime": "nodejs14.x",
@@ -247,7 +247,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/hungry-cloud-api/dev/1646942477805-2022-03-10T20:01:17.805Z/hungry-cloud-api.zip"
+          "S3Key": "serverless/hungrycloudapi/dev/1646943901170-2022-03-10T20:25:01.170Z/hungrycloudapi.zip"
         },
         "Handler": "api.deleteGrain",
         "Runtime": "nodejs14.x",
@@ -271,40 +271,40 @@
         "DeleteGrainLogGroup"
       ]
     },
-    "GetGrainLambdaVersion6Zc9v2zFumksLtiM534hPhl63gGp1WdGLEPlep0dJU": {
+    "GetGrainLambdaVersionJrj4nMRLxgCUXHqtM2YDiGwEf3wXbnOAHLticFX3GcM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetGrainLambdaFunction"
         },
-        "CodeSha256": "3n/csitlFbVOE2admm6GaxD2ONx6s5gs2JYZPJ0NeUI="
+        "CodeSha256": "Aq7UjyhM4sLL34kCm1Gv3kim1NMOvYQBuBpcqHS/rrI="
       }
     },
-    "CreateGrainLambdaVersionsXz9VrCWr7hIdUK9ktxE6jwokr3hXGw8NQwmFUf3QQ": {
+    "CreateGrainLambdaVersionXKyQ6xPi88BKCkfsWzLDWapSDCwUoM0S1SDldgUX2To": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateGrainLambdaFunction"
         },
-        "CodeSha256": "3n/csitlFbVOE2admm6GaxD2ONx6s5gs2JYZPJ0NeUI="
+        "CodeSha256": "Aq7UjyhM4sLL34kCm1Gv3kim1NMOvYQBuBpcqHS/rrI="
       }
     },
-    "DeleteGrainLambdaVersionqAbG3DW1gpb4sZX3dTYgjXHTMm1CqlrpAsTMxmbt1o": {
+    "DeleteGrainLambdaVersionxhr1rK2CECgBRYCHaMv6wvTMdAKqQJwHXKJ5shOL8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteGrainLambdaFunction"
         },
-        "CodeSha256": "3n/csitlFbVOE2admm6GaxD2ONx6s5gs2JYZPJ0NeUI="
+        "CodeSha256": "Aq7UjyhM4sLL34kCm1Gv3kim1NMOvYQBuBpcqHS/rrI="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "dev-hungry-cloud-api",
+        "Name": "dev-hungrycloudapi",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -505,7 +505,7 @@
         "DeleteGrainLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1646942476340": {
+    "ApiGatewayDeployment1646943899785": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -655,7 +655,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "hungry-cloud-api",
+                  "hungrycloudapi",
                   "dev",
                   "lambda"
                 ]
@@ -698,7 +698,7 @@
           "Fn::Join": [
             "-",
             [
-              "hungry-cloud-api",
+              "hungrycloudapi",
               "dev",
               "getGrain",
               {
@@ -736,7 +736,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "hungry-cloud-api",
+                  "hungrycloudapi",
                   "dev",
                   "lambda"
                 ]
@@ -779,7 +779,7 @@
           "Fn::Join": [
             "-",
             [
-              "hungry-cloud-api",
+              "hungrycloudapi",
               "dev",
               "createGrain",
               {
@@ -817,7 +817,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "hungry-cloud-api",
+                  "hungrycloudapi",
                   "dev",
                   "lambda"
                 ]
@@ -860,7 +860,7 @@
           "Fn::Join": [
             "-",
             [
-              "hungry-cloud-api",
+              "hungrycloudapi",
               "dev",
               "deleteGrain",
               {
@@ -902,34 +902,34 @@
         "Ref": "ServerlessDeploymentBucket"
       },
       "Export": {
-        "Name": "sls-hungry-cloud-api-dev-ServerlessDeploymentBucketName"
+        "Name": "sls-hungrycloudapi-dev-ServerlessDeploymentBucketName"
       }
     },
     "GetGrainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetGrainLambdaVersion6Zc9v2zFumksLtiM534hPhl63gGp1WdGLEPlep0dJU"
+        "Ref": "GetGrainLambdaVersionJrj4nMRLxgCUXHqtM2YDiGwEf3wXbnOAHLticFX3GcM"
       },
       "Export": {
-        "Name": "sls-hungry-cloud-api-dev-GetGrainLambdaFunctionQualifiedArn"
+        "Name": "sls-hungrycloudapi-dev-GetGrainLambdaFunctionQualifiedArn"
       }
     },
     "CreateGrainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateGrainLambdaVersionsXz9VrCWr7hIdUK9ktxE6jwokr3hXGw8NQwmFUf3QQ"
+        "Ref": "CreateGrainLambdaVersionXKyQ6xPi88BKCkfsWzLDWapSDCwUoM0S1SDldgUX2To"
       },
       "Export": {
-        "Name": "sls-hungry-cloud-api-dev-CreateGrainLambdaFunctionQualifiedArn"
+        "Name": "sls-hungrycloudapi-dev-CreateGrainLambdaFunctionQualifiedArn"
       }
     },
     "DeleteGrainLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteGrainLambdaVersionqAbG3DW1gpb4sZX3dTYgjXHTMm1CqlrpAsTMxmbt1o"
+        "Ref": "DeleteGrainLambdaVersionxhr1rK2CECgBRYCHaMv6wvTMdAKqQJwHXKJ5shOL8"
       },
       "Export": {
-        "Name": "sls-hungry-cloud-api-dev-DeleteGrainLambdaFunctionQualifiedArn"
+        "Name": "sls-hungrycloudapi-dev-DeleteGrainLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -955,7 +955,7 @@
         ]
       },
       "Export": {
-        "Name": "sls-hungry-cloud-api-dev-ServiceEndpoint"
+        "Name": "sls-hungrycloudapi-dev-ServiceEndpoint"
       }
     }
   }

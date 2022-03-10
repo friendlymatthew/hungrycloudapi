@@ -1,4 +1,4 @@
-service: hungry-cloud-api
+service: hungrycloudapi
 
 provider:
   name: aws
@@ -38,6 +38,7 @@ functions:
       - http:
           path: grain
           method: POST
+          cors: true
     iamRoleStatements:
       - Effect: "Allow"
         Action:
